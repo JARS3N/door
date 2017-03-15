@@ -14,7 +14,7 @@ shinyServer(function(input, output,session) {
     input$files %>%
       group_by(name) %>%
       (function(u){
-        file.copy(u$datapath,file.path(system.file("find",package="in"),u$name))
+        file.copy(u$datapath,file.path(system.file("find",package="door"),u$name))
       })
   })
 })
