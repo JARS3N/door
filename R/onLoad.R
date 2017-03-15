@@ -1,8 +1,8 @@
 .onLoad <- function(libname = find.package("door"), pkgname = "door") {
-  autoUp("door")
+  .autoUp("door")
 }
 
-autoUp<-function(pack){
+.autoUp<-function(pack){
  # pack<-gsub("[:]{2}[A-Z|a-z|0-9]+","",deparse(sys.call()[[1]]))
   testUrl <- function(url) {
     out <- tryCatch(
