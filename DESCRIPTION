@@ -1,0 +1,13 @@
+Package: in
+Type: Package
+Title: moves
+Version: 0.1.0
+Author: JARS3N
+Maintainer: JARS3N <JARS3N@GMAIL.COM>
+Description: does things
+License: What license is it under?
+Imports:
+		dplyr,
+		shiny
+Encoding: UTF-8
+LazyData: true
