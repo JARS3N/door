@@ -1,3 +1,3 @@
 touch<-function(){
-  shell.exec(system.file("find","in"))
+  shell.exec(system.file("find","door"))
 }
