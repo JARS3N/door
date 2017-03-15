@@ -1,3 +1,3 @@
 look<-function(){
-  list.files(system.file("find","door"))
+  list.files(system.file("find",package="door"))
 }
