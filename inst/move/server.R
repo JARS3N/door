@@ -5,7 +5,7 @@ nms<-ENVS[["USERNAME"]]
 if(.Platform$OS.type=="unix"){
  cmp<-system("hostname")
   nms<-ENVS[["HOSTNAME"]]
-  }else
+  }else{
 cmp<-ENVS[["COMPUTERNAME"]]
   nms<-ENVS[["USERNAME"]]
   }
