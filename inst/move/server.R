@@ -3,7 +3,7 @@ library(shiny)
 ENVS<-Sys.getenv()
 if(.Platform$OS.type=="unix"){
  cmp<<-system("hostname")
-  nms<<-ENVS[["HOSTNAME"]]
+  nms<<-ENVS[["LOGNAME"]]
   }else{
 cmp<<-ENVS[["COMPUTERNAME"]]
   nms<<-ENVS[["USERNAME"]]
