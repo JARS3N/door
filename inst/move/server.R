@@ -2,7 +2,13 @@ library(dplyr)
 library(shiny)
 ENVS<-Sys.getenv()
 nms<-ENVS[["USERNAME"]]
+if(.Platform$OS.type=="unix"){
+ cmp<-system("hostname")
+  nms<-ENVS[["HOSTNAME"]]
+  }else
 cmp<-ENVS[["COMPUTERNAME"]]
+  nms<-ENVS[["USERNAME"]]
+  }
 shinyServer(function(input, output,session) {
   output$nm<-renderText(nms)
   output$cmp<-renderText(cmp)
