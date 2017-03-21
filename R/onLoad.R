@@ -1,8 +1,12 @@
 .onLoad <- function(libname = find.package("door"), pkgname = "door") {
   .autoUp("door")
+  if("PipeFish" %in% .packages(all = TRUE)){
+    PipeFish::getUsrs()
+    }
 }
 
 .autoUp<-function(pack){
+  # mostly borrowed from Adam Lee Perelman's answer here: http://stackoverflow.com/a/33738713
  # pack<-gsub("[:]{2}[A-Z|a-z|0-9]+","",deparse(sys.call()[[1]]))
   testUrl <- function(url) {
     out <- tryCatch(
@@ -23,4 +27,4 @@
     devtools::install_github(gsub("https://github.com/","",pkg),quite=TRUE)
   }
 }
-# mostly borrowed from Adam Lee Perelman's answer here: http://stackoverflow.com/a/33738713
+
