@@ -1,8 +1,5 @@
 .onLoad <- function(libname = find.package("door"), pkgname = "door") {
   .autoUp("door")
-  if("PipeFish" %in% .packages(all = TRUE)){
-    PipeFish::getUsrs()
-    }
 }
 
 .autoUp<-function(pack){
