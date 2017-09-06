@@ -1,6 +1,9 @@
 clean<-function(){
-system.file(package='door','find') %>% 
-list.files(full.names=T) %>%
-unlink()
+unlink(
+  list.files(
+    path=system.file(package='door','find'),
+             full.names=T
+  )
+)
 message('room cleaned')
 }
