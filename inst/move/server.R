@@ -16,8 +16,7 @@ shinyServer(function(input, output,session) {
   })
 
   observeEvent(input$files,{
-    input$files %>%
-      group_by(name) %>%
+      group_by(input$files,name) %>%
       (function(u){
         file.copy(u$datapath,file.path(system.file("find",package="door"),u$name))
       })
